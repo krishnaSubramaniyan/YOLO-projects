@@ -1,0 +1,31 @@
+# nvidia cudatoolkit version 12.6 i used
+
+# install
+conda create --name anpr python=3.13
+conda activate anpr
+pip install --upgrade pip
+
+#paddlepaddle
+https://pytorch.org/
+
+#pytorch
+https://pytorch.org/
+
+# GPU installation
+# pytorch cuda-12.6
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
+
+# paddlepaddle cuda-12.6
+# paddlepaddle installation use this site [[https://www.paddlepaddle.org.cn/en/install/quick?docurl=/documentation/docs/en/install/pip/linux-pip_en.html][paddlepaddle]]
+python3 -m pip install paddlepaddle-gpu==3.0.0 -i https://www.paddlepaddle.org.cn/packages/stable/cu126/
+
+pip install opencv-python ultralytics paddleocr deep-sort-realtime tk
+
+mc create --name anpr-gpu python=3.9 -y && up anpr-gpu && pip install --upgrade pip && pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126 &&  python -m pip install paddlepaddle-gpu==3.0.0 -i https://www.paddlepaddle.org.cn/packages/stable/cu126/ && pip install opencv-python ultralytics paddleocr deep-sort-realtime tk
+
+# CPU installation
+python3 -m pip install paddlepaddle==3.0.0 -i https://www.paddlepaddle.org.cn/packages/stable/cpu/
+
+pip install opencv-python ultralytics paddleocr deep-sort-realtime tk
+
+mc create --name anpr-cpu python=3.9 -y && up anpr-cpu && pip install --upgrade pip && pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu && python -m pip install paddlepaddle==3.0.0 -i https://www.paddlepaddle.org.cn/packages/stable/cpu/ && pip install opencv-python ultralytics paddleocr deep-sort-realtime tk
