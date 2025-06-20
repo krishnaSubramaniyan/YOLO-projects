@@ -1,15 +1,31 @@
-# nvidia cudatoolkit version 12.6 i used
+* YOLO DeepSort Vehicle Log And NumberPlate Detection
+** Setup
+details about project envrionment and package version
+~python=>3.13~
+~cuda=>12.6~
+~torch~ depends on cuda verions i used ~torch=2.7.0+cu126~
+
+** Create environment
+# i use conda to create an environment
+#+begin_src sh
+  conda create --name anpr python=3.13 -y
+  conda activate anpr
+  pip install --upgrade pip
+#+end_src
+
+install ~pytorch~ and ~paddlepaddle~ visit is site
+[[pytorch][https://pytorch.org/]]
+[[paddlepaddle][https://pytorch.org/]]
+
+*** cpu setup
+
+*** gpu setup
 
 # install
 conda create --name anpr python=3.13
 conda activate anpr
 pip install --upgrade pip
 
-#paddlepaddle
-https://pytorch.org/
-
-#pytorch
-https://pytorch.org/
 
 # GPU installation
 # pytorch cuda-12.6
