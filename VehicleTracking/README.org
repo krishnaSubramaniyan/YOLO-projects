@@ -1,15 +1,22 @@
 * YOLO DeepSort Vehicle Log And NumberPlate Detection
 ** Setup
-details about project envrionment and package version\n
-~python=>3.13~
-~cuda=>12.6~
+details about project envrionment and package version
+
+~python>=3.13~
+
+~cuda>=12.6~
+
+~paddlepaddle>=3.0.0~
+
 ~torch~ depends on cuda version i used ~torch=2.7.0~
+
+develop and runtime OS ~Ubuntu 22.04~
 
 ** Create environment
 # i use conda to create an environment
 #+begin_src sh
   conda create --name anpr python=3.13 -y
-  conda activate 
+  conda activate
   pip install --upgrade pip
 #+end_src
 
@@ -18,13 +25,26 @@ install ~pytorch~ and ~paddlepaddle~ visit is site
 [[https://www.paddlepaddle.org.cn/en/install/quick?docurl=/documentation/docs/en/develop/install/pip/linux-pip_en.html][paddlepaddle]]
 
 *** Run with CPU
-
+install required packages
+#+begin_src sh
+  #pytorch
+  pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+  #paddlepaddle (x86_64 architecture)
+  python -m pip install paddlepaddle==3.0.0 -i https://www.paddlepaddle.org.cn/packages/stable/cpu/
+  #other packages
+  pip install opencv-python ultralytics paddleocr deep-sort-realtime tk
+#+end_src
 *** Run with GPU
-
-# install
-conda create --name anpr python=3.13
-conda activate anpr
-pip install --upgrade pip
+if you run with nvidia GPU first you install ~cuda toolkit~ [[https://developer.nvidia.com/cuda-12-6-0-download-archive][link]]
+install required packages
+#+begin_src sh
+  #pytorch
+  pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
+  #paddlepaddle
+  python -m pip install paddlepaddle-gpu==3.0.0 -i https://www.paddlepaddle.org.cn/packages/stable/cu126/
+  #other packages
+  pip install opencv-python ultralytics paddleocr deep-sort-realtime tk
+#+end_src
 
 
 # GPU installation
