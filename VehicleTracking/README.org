@@ -1,25 +1,25 @@
 * YOLO DeepSort Vehicle Log And NumberPlate Detection
 ** Setup
-details about project envrionment and package version
+details about project envrionment and package version\n
 ~python=>3.13~
 ~cuda=>12.6~
-~torch~ depends on cuda verions i used ~torch=2.7.0+cu126~
+~torch~ depends on cuda version i used ~torch=2.7.0~
 
 ** Create environment
 # i use conda to create an environment
 #+begin_src sh
   conda create --name anpr python=3.13 -y
-  conda activate anpr
+  conda activate 
   pip install --upgrade pip
 #+end_src
 
 install ~pytorch~ and ~paddlepaddle~ visit is site
-[[pytorch][https://pytorch.org/]]
-[[paddlepaddle][https://pytorch.org/]]
+[[https://pytorch.org/][pytorch]]
+[[https://www.paddlepaddle.org.cn/en/install/quick?docurl=/documentation/docs/en/develop/install/pip/linux-pip_en.html][paddlepaddle]]
 
-*** cpu setup
+*** Run with CPU
 
-*** gpu setup
+*** Run with GPU
 
 # install
 conda create --name anpr python=3.13
